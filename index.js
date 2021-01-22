@@ -50,18 +50,23 @@ function checkValidYear(year){
 // To be a leap year, the year number must be divisible by 4 – except for end-of-century years, which must be divisible by 400.
 
 function checkLeapYear(year){
-  if(year%100==0){
-    if(year%400){
+  // console.log("year is ",year);
+  if(year%100===0){
+    if(year%400===0){
+      // console.log("sec a");
       return true;
     }
     else{
-      return false
+      // console.log("sec b");
+      return false;
     }
   }
-  else if(year%4==0){
+  else if(year%4===0){
+    // console.log("sec c");
     return true;
   }
   else{
+    // console.log("sec d");
     return false;
   }
 }
